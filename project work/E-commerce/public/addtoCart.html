@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* public/style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-section {
+    text-align: center;
+}
+
+.payment-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+}
+
+.payment-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-section button:hover {
+    background-color: #0056b3;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-details, .payment-section {
+    margin-bottom: 20px;
+}
+
+.payment-section label {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+</style>
+
+<body>
+     <!--navbar-->
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collection</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+
+        </div>
+        <!--font awesome toggle-->
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <!--side navbar-->
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collection</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+    <header>
+        <h1>Add to Cart</h1>
+    </header>
+    
+    <main>
+        <!-- Container for displaying selected product details -->
+        <div class="product-details">
+            <h2>Selected Product:</h2>
+            <p id="product-name"></p>
+            <p id="product-price"></p>
+        </div>
+
+        <!-- Payment section -->
+        <div class="payment-section">
+            <h2>Total Price:</h2>
+            <p id="total-price"></p>
+
+            <!-- Payment method selection form -->
+            <form id="payment-form">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <!-- Add more payment options if needed -->
+                </select>
+                <button type="submit">Proceed to Payment</button>
+                <button id="redirect"onclick="redirectToCollection()">Add Another Product</button>
+            </form>
+        </div>
+    </main>
+
+ <!--fotter-->
+ <div class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2 class="" headingText>NostraS</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse doloremque, aliquid praesentium veniam
+                sequi iusto ut voluptates harum illo incidunt.</p>
+            <div class="footer-icon-container">
+                <i class="fa-brands fa-instagram" style="color:white"></i>
+                <i class="fa-brands fa-twitter" style="color:white"></i>
+                <i class="fa-brands fa-facebook" style="color:white"></i>
+            </div>
+        </div>
+    </div>
+    <p>@2024 NostraS.com</p>
+</div>
+    <script src="script.js"></script>
+    <script src="client.js"></script>
+   
+</body>
+
+</html>
+
